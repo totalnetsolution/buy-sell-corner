@@ -1,23 +1,19 @@
-import { getAuth, 
-    createUserWithEmailAndPassword
- } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
-import { getFirestore, 
-    doc, 
-    setDoc 
-} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
-import { getStorage, 
-    ref, 
-    uploadBytes, 
-    getDownloadURL 
-} from "https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js";
+// Firebase services imports
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js";
+import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-storage.js";
 
-const auth = getAuth();
-const db = getFirestore();
-const storage = getStorage();
+// Import Firebase app initialization (this is important)
+import { app } from "./firebase-config.js"; // Make sure this path is correct
+
+// Use the initialized app to get services
+const auth = getAuth(app);
+const db = getFirestore(app);
+const storage = getStorage(app);
 
 document.getElementById('register-form').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const firstName = document.getElementById('first-name').value;
     const lastName = document.getElementById('last-name').value;
     const email = document.getElementById('email').value;
