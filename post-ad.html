@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Ad</title>
+    <link rel="stylesheet" href="https://unpkg.com/desiyui/dist/desiyui.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Post Ad</h2>
+        <form id="post-ad-form">
+            <input type="text" id="ad-title" placeholder="Ad Title" required />
+            <textarea id="ad-description" placeholder="Ad Description" required></textarea>
+            <input type="text" id="ad-price" placeholder="Price" required />
+            <button type="submit">Post Ad</button>
+        </form>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="post-ad.js"></script>
+</body>
+</html>
