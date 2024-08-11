@@ -7,6 +7,47 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
+     <!--- navbar started------>
+
+     <div class="navbar bg-base-100 bg-primary ">
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl text-white">Buy Sells Corner</a>
+        </div> 
+        <div class="flex-none">
+          <div class="dropdown dropdown-end">
+            
+            </div>
+            <div
+              tabindex="0"
+              class="card card-compact dropdown-content bg-base-100 z-[1] mt-3 w-52 shadow">
+             
+            </div>
+          </div>
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="./utility/vector-users-icon.jpg" />
+              </div>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+            </li>
+              <li><a>Register</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+          <!--- navbar ended------>
     <div class="container">
         <h2>Ad Details</h2>
         <div id="ad-details"></div>
@@ -14,7 +55,7 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./config.js"></script>
-    <script src="single-ad.js"></script>
+    <script type="module" src="./config.js"></script>
+    <script type="module" src="single-ad.js"></script>
 </body>
 </html>
